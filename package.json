@@ -1,0 +1,33 @@
+{
+  "name": "fast-download",
+  "version": "0.1.0",
+  "description": "accelerated (multiple connections) http download stream",
+  "engines": [
+    "node >= 0.8.0"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/zenflow/node-fast-download"
+  },
+  "keywords": [
+    "fast",
+    "speedy",
+    "quick",
+    "accelerated",
+    "acceleration",
+    "accelerate",
+    "http",
+    "download",
+    "request",
+    "stream",
+    "streaming"
+  ],
+  "author": "Matthew Brunetti",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "request": "~2.21.0",
+    "underscore": "~1.4.4"
+  }
+}
