@@ -1,6 +1,6 @@
 {
   "name": "fast-download",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "accelerated (multiple connections) http download stream",
   "engines": [
     "node >= 0.8.0"
@@ -27,7 +27,6 @@
   "license": "BSD",
   "readmeFilename": "README.md",
   "dependencies": {
-    "request": "~2.21.0",
-    "underscore": "~1.4.4"
+    "request": "~2.21.0"
   }
 }

@@ -7,12 +7,14 @@ accelerated (multiple connections) http download Stream, for nodejs
 * for Node v0.10 & higher style streams, wrap 'download' stream like this "new stream.Readable().wrap(download)" 
 
 ## To Do
+! prioritize earlier chunks when not all requests are succeeding (ie downloading only on 2 of 5 connections)
+! detect when link has expired and throw error
+! fallback to non-accellerated download
+https://npmjs.org/package/through for creating streams that are both readable and writeable
+* support mirrors
 * add documentation!
-* store unwritten chunks as array of buffers instead of a single buffer
-* fix error: "(node) warning: possible EventEmitter memory leak detected. 11 listeners added. Use emitter.setMaxListeners() to increase limit."
 * for progress reports
 	* realistic download speeds
 	* estimated time of arrival
 * follow redirection
-* download.stop() & download.start()
 * option validation
