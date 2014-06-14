@@ -1,6 +1,6 @@
 {
   "name": "fast-download",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "accelerated (multiple connections) http download stream",
   "main": "lib/FastDownload.js",
   "engines": [
@@ -46,5 +46,6 @@
     "mkdirp": "^0.5.0",
     "charm": "^0.2.0",
     "colors": "^0.6.2"
-  }
+  },
+  "readme": "node-fast-download\r\n==================\r\n\r\naccelerated (multiple connections) http download Stream, for nodejs\r\n"
 }
