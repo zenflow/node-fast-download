@@ -56,14 +56,14 @@ once the `'start'` event has fired, you can access `dl.headers`, `dl.chunks`, an
 
 ## options
 
-'destFile' if set, download is written to this file location. default: null
+`'destFile'` if set, download is written to this file location. default: null
 
-'resumeFile' if 'destFile' is set and 'resumeFile' is true, the download will start where the existing file leaves off. default: false
+`'resumeFile'` if `'destFile'` is set and `'resumeFile'` is true, the download will start where the existing file leaves off. default: false
 
-'start' the starting position in bytes. default: 0
+`'start'` the starting position in bytes. default: 0
 
-'end' the ending position in bytes. default: null (end of file)
+`'end'` the ending position in bytes. default: null (end of file)
 
-'chunksAtOnce' the maximum number of chunks to download at a time. default: 3
+`'chunksAtOnce'` the maximum number of chunks to download at a time. default: 3
 
-'chunkSize' the size of each chunk in bytes. default: null (download size divided by 'chunksAtOnce')
+`'chunkSize'` the size of each chunk in bytes. default: null (download size divided by `'chunksAtOnce'`)
