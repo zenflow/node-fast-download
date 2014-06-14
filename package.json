@@ -47,5 +47,5 @@
     "charm": "^0.2.0",
     "colors": "^0.6.2"
   },
-  "readme": "node-fast-download\r\n==================\r\n\r\naccelerated (multiple connections) http download Stream, for nodejs\r\n"
+  "readme": "# node-fast-download\r\nnode module and command-line program for accelerated (multiple connections) http download Stream\r\n"
 }
