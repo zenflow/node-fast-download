@@ -39,7 +39,7 @@ dl.on('end', function(){console.log('ended');});
 dl.pipe(fs.createReadStream('foo.bar'));
 ```
 
-or use the constructor callback instead of the 'start' event (you may use both together)
+or use the constructor callback instead of the `'start'` event (you may use both together)
 
 ```js
 var FastDownload = require('fast-download');
@@ -52,7 +52,7 @@ new FastDownload(url, options, function(error, dl){
 });
 ```
 
-once the 'start' event has fired, you can access dl.headers, dl.chunks, and other data members
+once the `'start'` event has fired, you can access `dl.headers`, `dl.chunks`, and other data members
 
 ## options
 
