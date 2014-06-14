@@ -1,6 +1,6 @@
 {
   "name": "fast-download",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "accelerated (multiple connections) http download stream",
   "main": "lib/FastDownload.js",
   "engines": [
