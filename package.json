@@ -1,6 +1,6 @@
 {
   "name": "fast-download",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "accelerated (multiple connections) http download stream",
   "main": "lib/FastDownload.js",
   "engines": [
@@ -11,7 +11,7 @@
     "fast-download": "./bin/fast-download.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/run.js"
   },
   "repository": {
     "type": "git",

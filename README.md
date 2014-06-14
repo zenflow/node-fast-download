@@ -11,7 +11,7 @@ node module and command-line program for accelerated (multiple connections) http
 ```
 $ fast-download -h
 
-  Usage: fast-download [options] <url>
+  Usage: fast-download [options] <urls>
 
   Options:
 

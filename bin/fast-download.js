@@ -23,7 +23,7 @@ var default_options = {
     width: 72
 };
 program.version(package_json.version)
-    .usage('[options] <url>')
+    .usage('[options] <urls>')
     .option('-d, --directory <s>', 'destination directory (default: current working directory)')
     .option('-f, --filename <s>', 'destination filename (default: base filename in url)')
     .option('-o, --overwrite', 'overwrite existing file (default is to resume)')
