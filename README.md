@@ -4,7 +4,7 @@ node module and command-line program for accelerated (multiple connections) http
 
 # install
 
-`$ npm install -g fast-download` to install as a command-line program or `$ npm install -s fast-download` to add it to your project
+`$ npm install -g fast-download` to install as a command-line program or `$ npm install --save fast-download` to add it to your project
 
 # command-line usage
 
