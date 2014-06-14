@@ -31,6 +31,7 @@ $ fast-download -h
 ## example
 
 ``` js
+var FastDownload = require('fast-download');
 var dl = new FastDownload(url, options);
 dl.on('error', function(error){throw error;})
 dl.on('start', function(dl){console.log('started');})
@@ -38,9 +39,10 @@ dl.on('end', function(){console.log('ended');});
 dl.pipe(fs.createReadStream('foo.bar'));
 ```
 
-or use the constructor callback instead of the 'start' event
+or use the constructor callback instead of the 'start' event (you may use both together)
 
 ```js
+var FastDownload = require('fast-download');
 new FastDownload(url, options, function(error, dl){
     if (error){throw error;}
     console.log('started');
@@ -50,9 +52,11 @@ new FastDownload(url, options, function(error, dl){
 });
 ```
 
+once the 'start' event has fired, you can access dl.headers, dl.chunks, and other data members
+
 ## options
 
-'destFile' if set, download is saved to this file location. default: null
+'destFile' if set, download is written to this file location. default: null
 
 'resumeFile' if 'destFile' is set and 'resumeFile' is true, the download will start where the existing file leaves off. default: false
 
