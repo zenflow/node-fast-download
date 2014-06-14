@@ -4,11 +4,11 @@ node module and command-line program for accelerated (multiple connections) http
 # install
 `$ npm install -g fast-download` to install as a command-line program or `$ npm install -s fast-download` to add it to your project
 
-# command-line example
+# command-line usage
 ```
 $ fast-download -h
 
-  Usage: fast-download \[options\] <url>
+  Usage: fast-download [options] <url>
 
   Options:
 
@@ -22,3 +22,33 @@ $ fast-download -h
     -t, --timeout          timeout on http requests in seconds (default: 0, meaning no timeout)
     -w, --width <n>        display width (default: 72)
 ```
+
+# module usage
+
+## example
+
+``` js
+var dl = new FastDownload(url, options);
+dl.on('error', function(error){throw error;})
+dl.on('start', function(dl){console.log('started');})
+dl.on('end', function(){console.log('ended');});
+dl.pipe(fs.createReadStream('foo.bar'));
+```
+ or use the constructor callback instead of the 'start' event
+```js
+new FastDownload(url, options, function(error, dl){
+    if (error){throw error;}
+    console.log('started');
+    dl.on('error', function(error){throw error;});
+    dl.on('end', function(){console.log('ended');});
+    dl.pipe(fs.createReadStream('foo.bar'));
+});
+```
+
+## options
+'destFile' if set, download is saved to this file location. default: null
+'resumeFile' if 'destFile' is set and 'resumeFile' is true, the download will start where the existing file leaves off. default: false
+'start' the starting position in bytes. default: 0
+'end' the ending position in bytes. default: null (end of file)
+'chunksAtOnce' the maximum number of chunks to download at a time. default: 3
+'chunkSize' the size of each chunk in bytes. default: null (download size divided by 'chunksAtOnce')
