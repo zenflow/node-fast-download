@@ -1,0 +1,5 @@
+- cli - display more info from http headers, similar to wget
+- default filename = filename given in http header || base filename in url
+- persistent mode: on network (or other) error (like timeout), wait a second and try again
+- proper unit tests using tape
+- documentation

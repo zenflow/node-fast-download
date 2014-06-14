@@ -1,11 +1,18 @@
 {
   "name": "fast-download",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "accelerated (multiple connections) http download stream",
+  "main": "lib/FastDownload.js",
   "engines": [
-    "node >= 0.8.0"
+    "node >= 0.10.0"
   ],
-  "main": "index.js",
+  "preferGlobal": true,
+  "bin": {
+    "fast-download": "./bin/fast-download.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "http://github.com/zenflow/node-fast-download"
@@ -23,10 +30,21 @@
     "stream",
     "streaming"
   ],
-  "author": "Matthew Brunetti",
-  "license": "BSD",
+  "author": "Matthew Francis Brunetti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zenflow/node-fast-download/issues"
+  },
+  "homepage": "https://github.com/zenflow/node-fast-download",
   "readmeFilename": "README.md",
   "dependencies": {
-    "request": "~2.21.0"
+    "async": "^0.8.0",
+    "lodash": "^2.4.1",
+    "request": "^2.34.0",
+    "commander": "^2.2.0",
+    "tape": "^2.12.3",
+    "mkdirp": "^0.5.0",
+    "charm": "^0.2.0",
+    "colors": "^0.6.2"
   }
 }
