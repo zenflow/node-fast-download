@@ -1,6 +1,6 @@
 {
   "name": "fast-download",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "accelerated (multiple connections) http download stream",
   "main": "lib/FastDownload.js",
   "engines": [
@@ -36,7 +36,6 @@
     "url": "https://github.com/zenflow/node-fast-download/issues"
   },
   "homepage": "https://github.com/zenflow/node-fast-download",
-  "readmeFilename": "README.md",
   "dependencies": {
     "async": "^0.8.0",
     "lodash": "^2.4.1",
@@ -46,6 +45,5 @@
     "mkdirp": "^0.5.0",
     "charm": "^0.2.0",
     "colors": "^0.6.2"
-  },
-  "readme": "# node-fast-download\r\nnode module and command-line program for accelerated (multiple connections) http download Stream\r\n"
+  }
 }
