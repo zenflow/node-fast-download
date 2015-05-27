@@ -1,6 +1,6 @@
 var FastDownload = require('../');
 var url = 'http://nodejs.org/dist/v0.10.28/x64/node-v0.10.28-x64.msi';
-var options = {destFile: 'temp/node-v0.10.28-x64.msi', resumeFile: false};
+var options = {destFile: 'temp/node-v0.10.28-x64.msi', resumeFile: false, chunksAtOnce: 10};
 
 var on_error = function(error){
     console.log('error', error);
@@ -24,10 +24,12 @@ var on_end = function(){
 // - //
 /*new FastDownload(url, options)
     .on('error', on_error)
-    .on('start', on_start)
-    .on('end', on_end);*/
+    .once('start', on_start)
+    .once('end', on_end);*/
 // - or - //
 new FastDownload(url, options, function(error, dl){
     if (error){on_error(error); return;}
     on_start(dl);
+    dl.once('end', on_end);
 });
+// - //
