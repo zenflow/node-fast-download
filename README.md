@@ -5,7 +5,7 @@ node module and command-line program for accelerated (multiple connections) http
 [![dependencies](https://david-dm.org/zenflow/node-fast-download.svg)](https://david-dm.org/zenflow/node-fast-download)
 [![dev-dependencies](https://david-dm.org/zenflow/node-fast-download/dev-status.svg)](https://david-dm.org/zenflow/node-fast-download#info=devDependencies)
 
-[![npm](https://nodei.co/npm/node-fast-download.svg?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/node-fast-download)
+[![npm](https://nodei.co/npm/fast-download.svg?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/fast-download)
 
 # install
 
