@@ -2,6 +2,11 @@
 
 node module and command-line program for accelerated (multiple connections) http download Stream
 
+[![dependencies](https://david-dm.org/zenflow/node-fast-download.svg)](https://david-dm.org/zenflow/node-fast-download)
+[![dev-dependencies](https://david-dm.org/zenflow/node-fast-download/dev-status.svg)](https://david-dm.org/zenflow/node-fast-download#info=devDependencies)
+
+[![npm](https://nodei.co/npm/node-fast-download.svg?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/node-fast-download)
+
 # install
 
 `$ npm install -g fast-download` to install as a command-line program or `$ npm install --save fast-download` to add it to your project
@@ -67,3 +72,9 @@ once the `'start'` event has fired, you can access `dl.headers`, `dl.chunks`, an
 `'chunksAtOnce'` the maximum number of chunks to download at a time. default: 3
 
 `'chunkSize'` the size of each chunk in bytes. default: null (download size divided by `'chunksAtOnce'`)
+
+# Changelog
+### v0.3.5
+* Added changelog lol
+* Don't rely on sketchy `request` `'end'` event
+* Added badges/shields to readme
