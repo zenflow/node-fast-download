@@ -31,5 +31,6 @@ new FastDownload(url, options, function(error, dl){
     if (error){on_error(error); return;}
     on_start(dl);
     dl.once('end', on_end);
+    dl.once('done', function(){console.log('done');}
 });
 // - //
