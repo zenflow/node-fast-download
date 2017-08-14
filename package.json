@@ -3,9 +3,9 @@
   "version": "0.3.6",
   "description": "accelerated (multiple connections) http download stream",
   "main": "lib/FastDownload.js",
-  "engines": [
-    "node >= 0.10.0"
-  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
   "preferGlobal": true,
   "bin": {
     "fast-download": "./bin/fast-download.js"
