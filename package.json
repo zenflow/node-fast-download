@@ -6,7 +6,6 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "preferGlobal": true,
   "bin": {
     "fast-download": "./bin/fast-download.js"
   },
