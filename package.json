@@ -6,9 +6,6 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "bin": {
-    "fast-download": "./bin/fast-download.js"
-  },
   "scripts": {
     "test": "eslint \"**/*.js\" && node tests/run.js",
     "format": "prettier-eslint --write \"**/*.js\""
