@@ -10,7 +10,8 @@
     "fast-download": "./bin/fast-download.js"
   },
   "scripts": {
-    "test": "node tests/run.js"
+    "test": "standard && node tests/run.js",
+    "format": "prettier-eslint --write \"**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -37,10 +38,14 @@
   "homepage": "https://github.com/zenflow/node-fast-download",
   "dependencies": {
     "async": "^0.8.0",
-    "lodash": "^2.4.1",
-    "request": "^2.34.0",
-    "commander": "^2.2.0",
     "charm": "^0.2.0",
-    "colors": "^0.6.2"
+    "colors": "^0.6.2",
+    "commander": "^2.2.0",
+    "lodash": "^2.4.1",
+    "request": "^2.34.0"
+  },
+  "devDependencies": {
+    "prettier-eslint-cli": "^4.1.1",
+    "standard": "^10.0.3"
   }
 }
