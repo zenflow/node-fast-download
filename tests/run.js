@@ -1,13 +1,13 @@
 var FastDownload = require('../')
 
-new FastDownload(
+var dl = new FastDownload(
   'http://nodejs.org/dist/v0.10.28/x64/node-v0.10.28-x64.msi',
   {
     destFile: 'node-v0.10.28-x64.msi',
     resumeFile: false,
     chunksAtOnce: 10,
   },
-  function (error, dl) {
+  function (error) {
     if (error) {
       console.log('error', error)
       return

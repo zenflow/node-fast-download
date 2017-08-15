@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 'use strict'
-var package_json = require('../package')
+var packageJson = require('../package')
 var _ = require('lodash')
 var async = require('async')
 var path = require('path')
@@ -8,14 +8,14 @@ var mkdirp = require('mkdirp')
 var program = require('commander')
 var FastDownload = require('../lib/FastDownload')
 var display = require('./display')
-var colors = require('colors')
+require('colors')
 
-process.title = package_json.name
+process.title = packageJson.name
 try {
   process.stdin.destroy()
 } catch (error) {}
 
-var default_options = {
+var defaultOptions = {
   directory: '.',
   filename: null,
   overwrite: false,
@@ -25,7 +25,7 @@ var default_options = {
   width: 72,
 }
 program
-  .version(package_json.version)
+  .version(packageJson.version)
   .usage('[options] <urls>')
   .option(
     '-d, --directory <s>',
@@ -39,7 +39,7 @@ program
   .option(
     '-c --chunksAtOnce <n>',
     'the number of data chunks to download at the same time (default: ' +
-      default_options.chunksAtOnce +
+      defaultOptions.chunksAtOnce +
       ')',
     parseInt
   )
@@ -55,14 +55,14 @@ program
   )
   .option(
     '-w, --width <n>',
-    'display width (default: ' + default_options.width + ')',
+    'display width (default: ' + defaultOptions.width + ')',
     parseInt
   )
   .parse(process.argv)
 var urls = program.args
 var options = {}
-_.each(_.keys(default_options), function (key) {
-  options[key] = program[key] != undefined ? program[key] : default_options[key]
+_.each(_.keys(defaultOptions), function (key) {
+  options[key] = program[key] !== undefined ? program[key] : defaultOptions[key]
 })
 
 console.log('fast-download!'.rainbow + ' i choose you! '.bold)
@@ -96,7 +96,7 @@ mkdirp(options.directory, function (error) {
         options.directory,
         options.filename || path.basename(url)
       )
-      new FastDownload(url, { destFile: destination, }, function (error, dl) {
+      var dl = new FastDownload(url, { destFile: destination, }, function (error) {
         if (error) {
           cb(error)
           return
