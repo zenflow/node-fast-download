@@ -10,7 +10,7 @@
     "fast-download": "./bin/fast-download.js"
   },
   "scripts": {
-    "test": "standard && node tests/run.js",
+    "test": "eslint \"**/*.js\" && node tests/run.js",
     "format": "prettier-eslint --write \"**/*.js\""
   },
   "repository": {
