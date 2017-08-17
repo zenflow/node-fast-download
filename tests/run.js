@@ -1,6 +1,6 @@
-var FastDownload = require('../')
+const FastDownload = require('../')
 
-var dl = new FastDownload(
+const dl = new FastDownload(
   'http://nodejs.org/dist/v0.10.28/x64/node-v0.10.28-x64.msi',
   {
     destFile: 'node-v0.10.28-x64.msi',
@@ -13,27 +13,22 @@ var dl = new FastDownload(
       return
     }
     console.log('headers', JSON.stringify(dl.headers))
-    var interval = setInterval(function () {
+    const interval = setInterval(() => {
       console.log(
-        'size ' +
-          (dl.size / 1024 / 1024).toFixed(2) +
-          'MB\n' +
-          'position ' +
-          (dl.position / dl.size * 100).toFixed(2) +
-          '%\n' +
-          'downloaded ' +
-          (dl.downloaded / dl.size * 100).toFixed(2) +
-          '%\n'
+        `size ${(dl.size / 1024 / 1024).toFixed(2)} MB
+position ${(dl.position / dl.size * 100).toFixed(2)} %
+downloaded ${(dl.downloaded / dl.size * 100).toFixed(2)} %
+`
       )
     }, 200)
-    dl.once('error', function () {
+    dl.once('error', () => {
       console.log('error', error)
     })
-    dl.once('end', function () {
+    dl.once('end', () => {
       clearInterval(interval)
       console.log('end')
     })
-    dl.once('done', function () {
+    dl.once('done', () => {
       console.log('done')
     })
   }
