@@ -1,6 +1,6 @@
 {
   "extends": "eslint-config-standard",
   "rules": {
-    "comma-dangle": ["error", "always"]
+    "comma-dangle": ["error", "always-multiline"]
   }
 }
